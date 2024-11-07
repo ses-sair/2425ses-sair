@@ -1,4 +1,3 @@
-<!-- Declaración del tipo de documento y lenguaje -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -8,30 +7,29 @@
     <link rel="stylesheet" href="estilos/estilos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<!-- Contenido visible de la página -->
 <body>
     <!-- Cabecera con logo y título principal -->
-<header class="main-header">
-    <div class="header-content">
-        <!-- Sección izquierda: logo y título -->
-        <div class="logo-title">
-            <div class="logo-wrapper">
-                <img src="imagenes/Logo.jpg" alt="Logo del sitio" id="logo">
+    <header class="main-header">
+        <div class="header-content">
+            <!-- Sección izquierda: logo y título -->
+            <div class="logo-title">
+                <div class="logo-wrapper">
+                    <img src="imagenes/Logo.jpg" alt="Logo del sitio" id="logo">
+                </div>
+                <div class="title-wrapper">
+                    <h1>Contacto</h1>
+                    <p class="subtitle">Estamos aquí para ayudarte</p>
+                </div>
             </div>
-            <div class="title-wrapper">
-                <h1>Contacto</h1>
-                
+            <!-- Sección derecha: información de contacto -->
+            <div class="header-extra">
+                <div class="contact-info">
+                    <p><i class="fas fa-phone"></i> +34 900 000 000</p>
+                    <p><i class="fas fa-envelope"></i> info@sociedadgastronomica.com</p>
+                </div>
             </div>
         </div>
-        <!-- Sección derecha: información de contacto -->
-        <div class="header-extra">
-            <div class="contact-info">
-                <p><i class="fas fa-phone"></i> +34 900 000 000</p>
-                <p><i class="fas fa-envelope"></i> info@sociedadgastronomica.com</p>
-            </div>
-        </div>
-    </div>
-</header>
+    </header>
 
     <!-- Menú de navegación con enlaces a otras páginas -->
     <nav class="main-nav">
@@ -46,71 +44,47 @@
 
     <!-- Contenido principal: formulario de contacto -->
     <main class="contact-container">
-        <section class="contact-info">
+        <section class="contact-form">
             <h2><i class="fas fa-envelope"></i> Ponte en contacto</h2>
             <p>Nos encantaría escuchar tus comentarios y sugerencias sobre gastronomía y cultura vasca.</p>
-            
-            <div class="contact-details">
-                <div class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    <p>+34 900 000 000</p>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <p>Bilbao, País Vasco</p>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-clock"></i>
-                    <p>Lunes a Viernes: 9:00 - 18:00</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="contact-form">
-            <form action="mailto:ses-sair@birt.eus" method="post" enctype="text/plain">
+            <form id="contactForm">
                 <div class="form-group">
-                    <label for="nombre">
-                        <i class="fas fa-user"></i> Nombre
-                    </label>
+                    <label for="nombre"><i class="fas fa-user"></i> Nombre</label>
                     <input type="text" id="nombre" name="nombre" required>
                 </div>
-
                 <div class="form-group">
-                    <label for="correo">
-                        <i class="fas fa-envelope"></i> Correo
-                    </label>
+                    <label for="correo"><i class="fas fa-envelope"></i> Correo</label>
                     <input type="email" id="correo" name="correo" required>
                 </div>
-
                 <div class="form-group">
-                    <label for="asunto">
-                        <i class="fas fa-heading"></i> Asunto
-                    </label>
+                    <label for="asunto"><i class="fas fa-heading"></i> Asunto</label>
                     <input type="text" id="asunto" name="asunto" required>
                 </div>
-
                 <div class="form-group">
-                    <label for="mensaje">
-                        <i class="fas fa-comment"></i> Mensaje
-                    </label>
+                    <label for="mensaje"><i class="fas fa-comment"></i> Mensaje</label>
                     <textarea id="mensaje" name="mensaje" required></textarea>
                 </div>
-
-                <button type="submit">
-                    <i class="fas fa-paper-plane"></i> Enviar Mensaje
-                </button>
+                <button type="submit"><i class="fas fa-paper-plane"></i> Enviar Mensaje</button>
             </form>
         </section>
     </main>
 
-    <!-- Pie de página con información de contacto y enlaces a redes sociales -->
-    <footer>
-        <div class="social-links">
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
+    <!-- Pie de página -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="contact-info">
+                <h5>Contáctanos</h5>
+                <p><i class="fas fa-phone"></i> +34 900 000 000</p>
+                <p><i class="fas fa-envelope"></i> info@sociedadgastronomica.com</p>
+            </div>
+            <div class="social-links">
+                <a href="https://facebook.com/sociedadgastronomica" target="_blank" rel="noopener" aria-label="Síguenos en Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="https://twitter.com/sociedadgastronomica" target="_blank" rel="noopener" aria-label="Síguenos en Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com/sociedadgastronomica" target="_blank" rel="noopener" aria-label="Síguenos en Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p>&copy; 2024 Gastronomía y Cultura. Todos los derechos reservados.</p>
         </div>
-        <p>&copy; 2024 Gastronomía y Cultura</p>
     </footer>
 </body>
 </html>
+
