@@ -95,12 +95,6 @@ nav a.active {
     background-color: var(--secondary-color);
 }
 
-/* Grid layouts comunes */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
 
 /* Media queries */
 @media (max-width: 768px) {
@@ -118,17 +112,13 @@ nav a.active {
         width: 80px;
         height: 80px;
     }
-
-    .contact-container {
-        padding: var(--spacing-base);
-    }
 }
 
 /* Estilos específicos para contacto manteniendo la base */
 .contact-container {
     max-width: 800px;
     margin: 2rem auto;
-    padding: 2rem;
+    padding: var(--spacing-base);
 }
 
 .form-group {
@@ -319,13 +309,12 @@ button:hover {
 }
 
 /* Efecto para redes sociales */
-.social-links a {
-    transition: all 0.3s ease;
-}
-
-.social-links a:hover {
-    color: var(--primary-color);
-    transform: scale(1.2);
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 2rem 0;
 }
 
 /* Efecto para listas */
@@ -628,40 +617,73 @@ button:hover {
     text-align: justify;
 }
 
-/* Estilos para la cuadrícula de platos */
+/* Estilos para la sección de platos */
+.platos-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
 .platos-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
 }
 
 .plato-card {
-    position: relative;
-    overflow: hidden;
+    background: white;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
-    text-align: center;
-    padding: 1rem;
+    overflow: hidden;
+    transition: transform 0.3s ease;
 }
 
-.plato-card img {
+.plato-card:hover {
+    transform: translateY(-5px);
+}
+
+.plato-image {
     width: 100%;
-    height: 150px;
+    height: 250px;
+    overflow: hidden;
+}
+
+.plato-image img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    border-radius: var(--border-radius);
-    margin-bottom: 0.5rem;
+    transition: transform 0.3s ease;
 }
 
-.plato-card h3 {
+.plato-card:hover .plato-image img {
+    transform: scale(1.1);
+}
+
+.plato-content {
+    padding: 1.5rem;
+}
+
+.plato-content h3 {
     color: var(--primary-color);
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
 
-.plato-card p {
+.plato-content p {
     color: var(--text-color);
-    line-height: 1.4;
-    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+/* Media queries */
+@media (max-width: 992px) {
+    .platos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .platos-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Estilos para la cuadrícula de eventos */
@@ -787,4 +809,97 @@ button[type="submit"]:hover {
     transform: translateY(-2px);
     box-shadow: var(--box-shadow);
 }
+
+.history-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.history-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.history-card {
+    background: white;
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    box-shadow: var(--box-shadow);
+}
+
+.history-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    margin: 1rem 0;
+}
+
+@media (max-width: 992px) {
+    .history-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .history-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.history-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.history-card {
+    background: white;
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    box-shadow: var(--box-shadow);
+}
+
+@media (max-width: 992px) {
+    .history-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .history-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.section-title {
+    text-align: center;
+    margin: 3rem 0;
+    color: var(--primary-color);
+    font-size: 2rem;
+}
+
+/* Unificar los estilos de grid */
+.grid,
+.recipes-grid,
+.history-grid,
+.platos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Unificar contact-container */
+.contact-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: var(--spacing-base);
+}
+
+
+
 
